@@ -1,0 +1,26 @@
+{
+	"title": "Ваш любимый цвет?",
+	"description": "Выберите свой любимый цвет из списка.",
+	"options": [
+		{
+			"value": "red",
+			"label": "Красный"
+		},
+		{
+			"value": "blue",
+			"label": "Синий"
+		},
+		{
+			"value": "green",
+			"label": "Зеленый"
+		},
+		{
+			"value": "yellow",
+			"label": "Желтый"
+		},
+		{
+			"value": "purple",
+			"label": "Фиолетовый"
+		}
+	]
+}
