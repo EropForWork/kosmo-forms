@@ -15,7 +15,7 @@ class OptionsContainer extends React.Component {
 			<div>
 				{
 					options.map((option) => (
-						<OptionContainer key={option.value} value={option.value} label={option.label} />
+						<OptionContainer key={option.value} label={option.label} />
 					))
 				}
 			</div>
