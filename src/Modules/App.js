@@ -1,25 +1,17 @@
 import React from "react";
-import Title from "./Title";
 import info from "../info.json";
-import Description from "./Description";
-import OptionsContainer from "./Options-container";
+import FormContainer from "./Form-container";
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: info.title,
-            description: info.description,
-            options: info.options,
+            info: info,
         }
     }
     render() {
         return (
-            <div>
-                <Title title={this.state.title} />
-                <Description description={this.state.description} />
-                <OptionsContainer options={this.state.options} />
-            </div>
+            <FormContainer info={this.state.info} />
         )
     }
 }

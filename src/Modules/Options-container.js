@@ -2,25 +2,26 @@ import React from "react";
 import OptionContainer from "./Option-container";
 
 class OptionsContainer extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			options: this.props.options,
-		}
-	}
-
 	render() {
 		const { options } = this.props;
 		return (
 			<div>
-				{
-					options.map((option, id) => (
-						<OptionContainer key={id} id={id} label={option.label} />
-					))
-				}
+				{options.map((option, id) => (
+					<OptionContainer
+						key={id}
+						id={id}
+						label={option.label}
+						onSelect={this.handleOptionSelect}
+					/>
+				))}
 			</div>
-		)
+		);
 	}
+
+	handleOptionSelect = (id) => {
+		console.log(`Выбран элемент с id: ${id}`); // Выводим лог с id
+		this.props.onSelect && this.props.onSelect(id); // При необходимости, передаем id дальше
+	};
 }
 
 export default OptionsContainer;
