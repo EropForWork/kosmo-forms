@@ -15,7 +15,7 @@ class OptionContainer extends React.Component {
 
   render() {
     return (
-      <div className="option-container">
+      <div className={this.props.className}>
         <input
           type="radio"
           name="option"

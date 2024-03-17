@@ -22,8 +22,8 @@ class FormContainer extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<Title title={this.state.title} />
+			<div className="form-container">
+				<Title title={this.state.title} className="label" />
 				<Description description={this.state.description} />
 				<OptionsContainer options={this.state.options} onSelect={this.handleOptionSelect} />
 				<Button className="button-confirm" type="button" text="Подтвердить!" selected={this.state.selectedOption !== null} />

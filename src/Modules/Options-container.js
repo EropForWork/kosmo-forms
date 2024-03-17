@@ -5,13 +5,14 @@ class OptionsContainer extends React.Component {
 	render() {
 		const { options } = this.props;
 		return (
-			<div>
+			<div className="form-group">
 				{options.map((option, id) => (
 					<OptionContainer
 						key={id}
 						id={id}
 						label={option.label}
 						onSelect={this.handleOptionSelect}
+						className="input"
 					/>
 				))}
 			</div>
