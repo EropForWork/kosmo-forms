@@ -20,9 +20,8 @@ class OptionsContainer extends React.Component {
 	}
 
 	handleOptionSelect = (id) => {
-		console.log(`Выбран элемент с id: ${id}`); // Выводим лог с id
-		this.props.onSelect && this.props.onSelect(id); // При необходимости, передаем id дальше
-	};
+		this.props.onSelect(id)
+	}
 }
 
 export default OptionsContainer;

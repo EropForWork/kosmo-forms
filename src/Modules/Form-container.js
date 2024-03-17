@@ -16,9 +16,8 @@ class FormContainer extends React.Component {
 	}
 
 	handleOptionSelect = (selectedOption) => {
-		this.setState({ selectedOption });
-		console.log(this.state);
-	};
+		this.setState({ selectedOption })
+	}
 
 	render() {
 		return (
@@ -26,7 +25,7 @@ class FormContainer extends React.Component {
 				<Title title={this.state.title} className="label" />
 				<Description description={this.state.description} />
 				<OptionsContainer options={this.state.options} onSelect={this.handleOptionSelect} />
-				<Button className="button-confirm" type="button" text="Подтвердить!" selected={this.state.selectedOption !== null} />
+				<Button className="button-confirm" type="button" text="Подтвердить!" selectedOption={this.state.selectedOption} />
 			</div>
 		);
 	}
